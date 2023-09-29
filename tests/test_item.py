@@ -42,3 +42,11 @@ def test_calculate_total_price(class_instance):
 
 def test_apply_discount(class_instance):
     assert class_instance.apply_discount() == None
+
+
+def test_str(class_instance):
+    assert str(class_instance) == 'Смартфон'
+
+
+def test_repr(class_instance):
+    assert repr(class_instance) == "Item('Смартфон', 10000, 20)"
