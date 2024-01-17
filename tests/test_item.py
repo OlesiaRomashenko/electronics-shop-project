@@ -8,6 +8,10 @@ import pytest
 def class_instance():
     return Item("Смартфон", 10000, 20)
 
+@pytest.fixture
+def child_class_instance():
+    return Phone()
+
 
 def test_init(class_instance):
     assert class_instance._Item__name == "Смартфон"
@@ -50,3 +54,6 @@ def test_str(class_instance):
 
 def test_repr(class_instance):
     assert repr(class_instance) == "Item('Смартфон', 10000, 20)"
+
+def test_add(class_instance):
+    pass

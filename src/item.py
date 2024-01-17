@@ -68,3 +68,8 @@ class Item:
         Применяет установленную скидку для конкретного товара.
         """
         self.price = self.price * self.pay_rate
+
+    def __add__(self, other):
+        if not isinstance(other, self.__class__):
+            raise ValueError('Складывать можно только объекты Item и Phone.')
+        return self.quantity + other.quantity
